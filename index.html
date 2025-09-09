@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>🎲 Probability Calculator</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>🎲 Probability Calculator</h1>
+    <p>Calculate probabilities—may not be accurate, you must still rely on your brain</p>
+
+    <section class="calculator-section">
+      <h2>1. Single Event Probability</h2>
+      <div class="input-group">
+        <label>Favorable Outcomes: 
+          <input type="number" id="favorable" value="3" min="0">
+        </label>
+        <label>Total Outcomes: 
+          <input type="number" id="total" value="10" min="1">
+        </label>
+        <button onclick="calcSingle()">Calculate P(A)</button>
+        <button type="button" onclick="clearSection('result-single')">Clear</button>
+      </div>
+      <div id="result-single" class="result-box"></div>
+    </section>
+
+    <section class="calculator-section">
+      <h2>2. Complement Rule: P(not A)</h2>
+      <div class="input-group">
+        <label>P(A): 
+          <input type="number" id="p_a" step="0.01" value="0.3" min="0" max="1">
+        </label>
+        <button onclick="calcComplement()">Calculate P(not A)</button>
+        <button type="button" onclick="clearSection('result-complement')">Clear</button>
+      </div>
+      <div id="result-complement" class="result-box"></div>
+    </section>
+
+    <section class="calculator-section">
+      <h2>3. Independent Events: P(A and B)</h2>
+      <div class="input-group">
+        <label>P(A): 
+          <input type="number" id="p_a_and" step="0.01" value="0.5" min="0" max="1">
+        </label>
+        <label>P(B): 
+          <input type="number" id="p_b_and" step="0.01" value="0.4" min="0" max="1">
+        </label>
+        <button onclick="calcAnd()">Calculate P(A and B)</button>
+        <button type="button" onclick="clearSection('result-and')">Clear</button>
+      </div>
+      <div id="result-and" class="result-box"></div>
+    </section>
+
+    <section class="calculator-section">
+      <h2>4. Union: P(A or B)</h2>
+      <div class="input-group">
+        <label>P(A): 
+          <input type="number" id="p_a_or" step="0.01" value="0.5" min="0" max="1">
+        </label>
+        <label>P(B): 
+          <input type="number" id="p_b_or" step="0.01" value="0.3" min="0" max="1">
+        </label>
+        <label>P(A and B): 
+          <input type="number" id="p_a_and_b" step="0.01" value="0.1" min="0" max="1">
+        </label>
+        <button onclick="calcOr()">Calculate P(A or B)</button>
+        <button type="button" onclick="clearSection('result-or')">Clear</button>
+      </div>
+      <div id="result-or" class="result-box"></div>
+    </section>
+  </div>
+  
+  <div class="redirect">
+  <a class="button" href="Roulette/roulette-cal.html"> Try the Roulette Probability Calculator</a>
+  <a class="button" href="dice/dice.html">Try Dice roll probability Calculator</a>
+  <a class="button" href="cards/cards.html">Try card draw probability calculator</a>
+</div>
+
+  <script src="main.js"></script>
+</body>
+</html>
