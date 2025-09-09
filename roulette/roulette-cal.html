@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Roulette Calculator</title>
+  <link rel="stylesheet" href="/roulette/styles/style.css">
+</head>
+<body>
+
+  <section class="calculator-section">
+    <h2>🎰 ROULETTE COLOR CALCULATOR™</h2>
+    <p><strong>⚠️ WARNING:</strong> This is for educational purposes only. <br>
+       Do NOT bet your rent, dog, or children’s college fund. Seriously.</p>
+
+    <div class="input-group">
+      <label>
+        <input type="radio" name="roulette-type" value="american" checked> American (0, 00) — House Edge: 5.26%
+      </label>
+      <label>
+        <input type="radio" name="roulette-type" value="european"> European (0) — House Edge: 2.70%
+      </label>
+    </div>
+
+    <div class="input-group">
+      <label>
+        <input type="radio" name="color-bet" value="red"> Red (18 numbers)
+      </label>
+      <label>
+        <input type="radio" name="color-bet" value="black"> Black (18 numbers)
+      </label>
+      <label>
+        <input type="radio" name="color-bet" value="green"> Green (0 / 00 — 1 or 2 numbers)
+      </label>
+    </div>
+
+    <button onclick="calcRoulette()">🔮 Get My “Prediction”</button>
+    <button type="button" onclick="clearSection('result-roulette')">Clear</button>
+
+    <div id="result-roulette" class="result-box"></div>
+  </section>
+
+  <script src="/roulette/roulette.js"></script>
+
+</body>
+</html>
